@@ -8,5 +8,16 @@ RSpec.describe Trip, :type => :model do
     expect(trip.date_end).to eq("2013-01-14")
     expect(trip.new_record?).to eq(true)
   end
+
+  subject { FactoryGirl.create(:trip) }
+
+  it "should have a vaild factory" do
+    expect(subject).to be_valid
+  end
+
+  # it "should create a valid trip" do
+  #   expect(trip.title).to be_valid
+  # end
+
 end
 
